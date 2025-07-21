@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://wuchang-fallen-feathers.com/sitemap.xml
+
+# SEO优化
+Crawl-delay: 1
+
+# 允许搜索引擎抓取所有内容
+Allow: /index.html
+Allow: /game-intro.html
+Allow: /news.html
+Allow: /media.html
+Allow: /release-info.html
+Allow: /css/
+Allow: /js/
+Allow: /images/
+Allow: /data/
