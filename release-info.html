@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WUCHANG: Fallen Feathers发布信息：2025年7月24日全平台发售，支持PC Steam、PlayStation 5、Xbox Series X/S，首发加入Xbox Game Pass。">
+    <meta name="keywords" content="WUCHANG预购, 明末渊虚之羽发售日期, Steam预购, PS5预购, Xbox预购, Game Pass, 游戏发布信息">
+    <meta name="author" content="MiniMax Agent">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="发布信息 - WUCHANG: Fallen Feathers | 预购平台信息">
+    <meta property="og:description" content="WUCHANG: Fallen Feathers将于2025年7月24日全平台发售，现已开启预购。首发加入Xbox Game Pass。">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="./images/wuchang_screenshot.jpg">
+    
+    <link rel="canonical" href="https://wuchang-fallen-feathers.com/release-info.html">
+    <link rel="stylesheet" href="./css/styles.css">
+    
+    <title>发布信息 - WUCHANG: Fallen Feathers | 预购平台信息</title>
+    
+    <style>
+        .release-hero {
+            background: linear-gradient(
+                rgba(10, 10, 10, 0.8),
+                rgba(139, 0, 0, 0.4)
+            ),
+            url('./images/wuchang_screenshot.jpg') center/cover no-repeat;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .countdown-container {
+            background: var(--bg-secondary);
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .countdown-timer {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+        
+        .countdown-item {
+            background: var(--bg-tertiary);
+            border: 2px solid var(--accent-gold);
+            border-radius: 15px;
+            padding: 30px 20px;
+            min-width: 120px;
+            text-align: center;
+        }
+        
+        .countdown-number {
+            font-size: 3rem;
+            color: var(--accent-gold);
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .countdown-label {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+        
+        .platforms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin: 60px 0;
+        }
+        
+        .platform-card {
+            background: var(--bg-tertiary);
+            border: 2px solid var(--border-color);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .platform-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent-gold);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+        }
+        
+        .platform-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .platform-card:hover::before {
+            left: 100%;
+        }
+        
+        .platform-logo {
+            font-size: 4rem;
+            margin-bottom: 25px;
+            color: var(--accent-gold);
+        }
+        
+        .platform-name {
+            font-size: 1.8rem;
+            color: var(--text-primary);
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        
+        .platform-date {
+            color: var(--accent-red-light);
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        
+        .platform-features {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+        
+        .platform-features li {
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        .platform-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--accent-gold);
+            font-weight: bold;
+        }
+        
+        .preorder-btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: linear-gradient(45deg, var(--accent-gold), #f4d03f);
+            color: var(--bg-primary);
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .preorder-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
+        }
+        
+        .preorder-btn.gamepass {
+            background: linear-gradient(45deg, #107c10, #0e6b0e);
+            color: white;
+        }
+        
+        .preorder-btn.gamepass:hover {
+            box-shadow: 0 10px 30px rgba(16, 124, 16, 0.4);
+        }
+        
+        .pricing-section {
+            background: var(--bg-secondary);
+            padding: 80px 0;
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+        
+        .pricing-card {
+            background: var(--bg-tertiary);
+            border: 2px solid var(--border-color);
+            border-radius: 15px;
+            padding: 40px 30px;
+            text-align: center;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .pricing-card.featured {
+            border-color: var(--accent-gold);
+            transform: scale(1.05);
+        }
+        
+        .pricing-card.featured::before {
+            content: '推荐';
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--accent-gold);
+            color: var(--bg-primary);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-gold);
+        }
+        
+        .pricing-title {
+            font-size: 1.5rem;
+            color: var(--accent-gold);
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        
+        .pricing-price {
+            font-size: 3rem;
+            color: var(--text-primary);
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        .pricing-currency {
+            color: var(--text-secondary);
+            font-size: 1rem;
+        }
+        
+        .pricing-features {
+            list-style: none;
+            margin: 30px 0;
+            text-align: left;
+        }
+        
+        .pricing-features li {
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .pricing-features li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--accent-gold);
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+        
+        .system-requirements {
+            margin-top: 80px;
+        }
+        
+        .requirements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+        
+        .requirements-card {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border-color);
+            border-radius: 15px;
+            padding: 40px;
+        }
+        
+        .requirements-title {
+            font-size: 1.5rem;
+            color: var(--accent-gold);
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .requirements-list {
+            list-style: none;
+        }
+        
+        .requirements-list li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-secondary);
+        }
+        
+        .requirements-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .req-label {
+            font-weight: bold;
+            color: var(--text-primary);
+            flex: 1;
+        }
+        
+        .req-value {
+            flex: 2;
+            text-align: right;
+        }
+        
+        .special-offers {
+            background: var(--bg-primary);
+            padding: 80px 0;
+        }
+        
+        .offers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+        
+        .offer-card {
+            background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-secondary));
+            border: 2px solid var(--accent-red);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .offer-badge {
+            position: absolute;
+            top: -15px;
+            right: 20px;
+            background: var(--accent-red);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+        
+        .offer-title {
+            font-size: 1.8rem;
+            color: var(--accent-gold);
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        
+        .offer-description {
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        
+        @media (max-width: 768px) {
+            .countdown-timer {
+                gap: 15px;
+            }
+            
+            .countdown-item {
+                min-width: 90px;
+                padding: 20px 15px;
+            }
+            
+            .countdown-number {
+                font-size: 2rem;
+            }
+            
+            .platforms-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .requirements-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .pricing-card.featured {
+                transform: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar" role="navigation" aria-label="主导航">
+        <div class="nav-container">
+            <a href="index.html" class="logo" aria-label="WUCHANG: Fallen Feathers 首页">
+                WUCHANG: Fallen Feathers
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html" aria-label="首页">首页</a></li>
+                <li><a href="game-intro.html" aria-label="游戏介绍">游戏介绍</a></li>
+                <li><a href="news.html" aria-label="新闻资讯">新闻资讯</a></li>
+                <li><a href="media.html" aria-label="媒体画廊">媒体画廊</a></li>
+                <li><a href="release-info.html" aria-label="发布信息" class="active">发布信息</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 主要内容 -->
+    <main class="main-content">
+        <!-- 发布英雄区域 -->
+        <section class="release-hero">
+            <div class="hero-content">
+                <h1 class="game-title">2025年7月24日</h1>
+                <h2 class="game-subtitle">全平台正式发售</h2>
+                <p class="hero-description">
+                    现已开启全平台预购，首发加入Xbox Game Pass
+                </p>
+                <div class="cta-buttons">
+                    <a href="#platforms" class="btn btn-primary">立即预购</a>
+                    <a href="#requirements" class="btn btn-secondary">查看配置要求</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 发售倒计时 -->
+        <section class="countdown-container">
+            <div class="container">
+                <h2 style="color: var(--accent-gold); font-size: 2.5rem; margin-bottom: 30px;">发售倒计时</h2>
+                <div class="countdown-timer" id="countdown-timer">
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="days">--</div>
+                        <div class="countdown-label">天</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="hours">--</div>
+                        <div class="countdown-label">小时</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="minutes">--</div>
+                        <div class="countdown-label">分钟</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="seconds">--</div>
+                        <div class="countdown-label">秒</div>
+                    </div>
+                </div>
+                <p style="color: var(--text-secondary); font-size: 1.2rem;">
+                    Steam版本将于7月23日提前1天发售
+                </p>
+            </div>
+        </section>
+
+        <!-- 平台信息 -->
+        <section id="platforms" class="section">
+            <div class="container">
+                <h2 class="section-title">支持平台</h2>
+                
+                <div class="platforms-grid">
+                    <div class="platform-card">
+                        <div class="platform-logo">🖥️</div>
+                        <h3 class="platform-name">PC (Steam)</h3>
+                        <div class="platform-date">2025年7月23日</div>
+                        <ul class="platform-features">
+                            <li>支持4K分辨率</li>
+                            <li>超高画质设置</li>
+                            <li>键鼠操作优化</li>
+                            <li>MOD社区支持</li>
+                            <li>Steam成就系统</li>
+                            <li>Steam云存档</li>
+                        </ul>
+                        <a href="https://store.steampowered.com" class="preorder-btn" target="_blank" rel="noopener">
+                            Steam预购
+                        </a>
+                    </div>
+
+                    <div class="platform-card">
+                        <div class="platform-logo">🎮</div>
+                        <h3 class="platform-name">PlayStation 5</h3>
+                        <div class="platform-date">2025年7月24日</div>
+                        <ul class="platform-features">
+                            <li>DualSense手柄支持</li>
+                            <li>3D音效</li>
+                            <li>超快SSD加载</li>
+                            <li>4K HDR画质</li>
+                            <li>触觉反馈</li>
+                            <li>自适应扳机</li>
+                        </ul>
+                        <a href="https://store.playstation.com" class="preorder-btn" target="_blank" rel="noopener">
+                            PlayStation预购
+                        </a>
+                    </div>
+
+                    <div class="platform-card">
+                        <div class="platform-logo">🎯</div>
+                        <h3 class="platform-name">Xbox Series X/S</h3>
+                        <div class="platform-date">2025年7月24日</div>
+                        <ul class="platform-features">
+                            <li>Smart Delivery技术</li>
+                            <li>Quick Resume支持</li>
+                            <li>120fps游戏模式</li>
+                            <li>Auto HDR增强</li>
+                            <li>空间音频</li>
+                            <li>首发加入Game Pass</li>
+                        </ul>
+                        <a href="https://www.xbox.com" class="preorder-btn gamepass" target="_blank" rel="noopener">
+                            Xbox预购 / Game Pass
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Google AdSense 广告位 -->
+                <div class="ad-container" style="margin: 60px 0;">
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                         data-ad-slot="XXXXXXXXXX"
+                         data-ad-format="auto"
+                         data-full-width-responsive="true">
+                        <div class="ad-placeholder">广告位 - Google AdSense</div>
+                    </ins>
+                </div>
+            </div>
+        </section>
+
+        <!-- 定价信息 -->
+        <section class="pricing-section">
+            <div class="container">
+                <h2 class="section-title">版本与定价</h2>
+                
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <h3 class="pricing-title">标准版</h3>
+                        <div class="pricing-price">$49.99<span class="pricing-currency"> USD</span></div>
+                        <ul class="pricing-features">
+                            <li>完整游戏内容</li>
+                            <li>官方音乐原声带</li>
+                            <li>数字壁纸包</li>
+                            <li>Steam成就系统</li>
+                        </ul>
+                        <a href="#" class="preorder-btn">立即预购</a>
+                    </div>
+
+                    <div class="pricing-card featured">
+                        <h3 class="pricing-title">豪华版</h3>
+                        <div class="pricing-price">$69.99<span class="pricing-currency"> USD</span></div>
+                        <ul class="pricing-features">
+                            <li>完整游戏内容</li>
+                            <li>独家DLC内容包</li>
+                            <li>角色皮肤包</li>
+                            <li>数字艺术集</li>
+                            <li>官方音乐原声带</li>
+                            <li>开发者评论音频</li>
+                            <li>特别版游戏内装备</li>
+                        </ul>
+                        <a href="#" class="preorder-btn">立即预购</a>
+                    </div>
+
+                    <div class="pricing-card">
+                        <h3 class="pricing-title">Xbox Game Pass</h3>
+                        <div class="pricing-price">包含<span class="pricing-currency"> 订阅</span></div>
+                        <ul class="pricing-features">
+                            <li>首发日即可游玩</li>
+                            <li>无需额外购买</li>
+                            <li>包含所有基础内容</li>
+                            <li>支持Xbox云游戏</li>
+                            <li>PC和Xbox都可游玩</li>
+                        </ul>
+                        <a href="#" class="preorder-btn gamepass">订阅Game Pass</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 系统配置要求 -->
+        <section id="requirements" class="section">
+            <div class="container">
+                <h2 class="section-title">PC系统配置要求</h2>
+                
+                <div class="requirements-grid">
+                    <div class="requirements-card">
+                        <h3 class="requirements-title">最低配置</h3>
+                        <ul class="requirements-list">
+                            <li>
+                                <span class="req-label">操作系统:</span>
+                                <span class="req-value">Windows 10 64-bit</span>
+                            </li>
+                            <li>
+                                <span class="req-label">处理器:</span>
+                                <span class="req-value">Intel i5-8400 / AMD Ryzen 5 2600</span>
+                            </li>
+                            <li>
+                                <span class="req-label">内存:</span>
+                                <span class="req-value">12 GB RAM</span>
+                            </li>
+                            <li>
+                                <span class="req-label">显卡:</span>
+                                <span class="req-value">GTX 1060 6GB / RX 580 8GB</span>
+                            </li>
+                            <li>
+                                <span class="req-label">DirectX:</span>
+                                <span class="req-value">版本 12</span>
+                            </li>
+                            <li>
+                                <span class="req-label">存储空间:</span>
+                                <span class="req-value">需要 50 GB 可用空间</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="requirements-card">
+                        <h3 class="requirements-title">推荐配置</h3>
+                        <ul class="requirements-list">
+                            <li>
+                                <span class="req-label">操作系统:</span>
+                                <span class="req-value">Windows 11 64-bit</span>
+                            </li>
+                            <li>
+                                <span class="req-label">处理器:</span>
+                                <span class="req-value">Intel i7-10700K / AMD Ryzen 7 3700X</span>
+                            </li>
+                            <li>
+                                <span class="req-label">内存:</span>
+                                <span class="req-value">16 GB RAM</span>
+                            </li>
+                            <li>
+                                <span class="req-label">显卡:</span>
+                                <span class="req-value">RTX 3070 / RX 6700 XT</span>
+                            </li>
+                            <li>
+                                <span class="req-label">DirectX:</span>
+                                <span class="req-value">版本 12</span>
+                            </li>
+                            <li>
+                                <span class="req-label">存储空间:</span>
+                                <span class="req-value">需要 50 GB 可用空间 (SSD推荐)</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Google AdSense 方形广告 -->
+                <div class="ad-container" style="margin: 60px 0;">
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                         data-ad-slot="XXXXXXXXXX"
+                         data-ad-format="rectangle">
+                        <div class="ad-placeholder" style="width: 336px; height: 280px;">广告位 - Google AdSense</div>
+                    </ins>
+                </div>
+            </div>
+        </section>
+
+        <!-- 特别优惠 -->
+        <section class="special-offers">
+            <div class="container">
+                <h2 class="section-title">预购特别优惠</h2>
+                
+                <div class="offers-grid">
+                    <div class="offer-card">
+                        <div class="offer-badge">限时优惠</div>
+                        <h3 class="offer-title">早鸟预购折扣</h3>
+                        <p class="offer-description">
+                            现在预购可享受10%的早鸟折扣优惠，同时获得独家预购奖励内容，包括特别版武器皮肤和角色装备。
+                        </p>
+                        <div style="margin-bottom: 20px; color: var(--accent-gold); font-size: 1.3rem; font-weight: bold;">
+                            优惠价格：$44.99 (原价$49.99)
+                        </div>
+                        <a href="#" class="preorder-btn">立即预购</a>
+                    </div>
+
+                    <div class="offer-card">
+                        <div class="offer-badge">独家福利</div>
+                        <h3 class="offer-title">Game Pass首发</h3>
+                        <p class="offer-description">
+                            Xbox Game Pass订阅用户可在发售首日免费游玩完整版本，无需额外购买。同时享受云游戏支持，随时随地畅玩。
+                        </p>
+                        <div style="margin-bottom: 20px; color: var(--accent-gold); font-size: 1.3rem; font-weight: bold;">
+                            首月仅需 $1
+                        </div>
+                        <a href="#" class="preorder-btn gamepass">订阅Game Pass</a>
+                    </div>
+
+                    <div class="offer-card">
+                        <div class="offer-badge">预购奖励</div>
+                        <h3 class="offer-title">独家预购内容</h3>
+                        <p class="offer-description">
+                            所有预购用户都将获得独家的"明末武士"装备套装、特别版武器皮肤以及游戏内专属称号。
+                        </p>
+                        <div style="margin-bottom: 20px; color: var(--accent-gold); font-size: 1.3rem; font-weight: bold;">
+                            价值 $19.99 的免费内容
+                        </div>
+                        <a href="#" class="preorder-btn">了解详情</a>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 60px;">
+                    <h3 style="color: var(--accent-gold); margin-bottom: 30px;">还有疑问？</h3>
+                    <div class="cta-buttons">
+                        <a href="game-intro.html" class="btn btn-primary">了解游戏详情</a>
+                        <a href="media.html" class="btn btn-secondary">观看游戏预告</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>发布信息</h3>
+                    <p>发售日期：2025年7月24日</p>
+                    <p>Steam提前发售：7月23日</p>
+                    <p>支持平台：PC/PS5/Xbox</p>
+                    <p>首发加入Xbox Game Pass</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>预购平台</h3>
+                    <p><a href="https://store.steampowered.com" target="_blank">Steam商店</a></p>
+                    <p><a href="https://store.playstation.com" target="_blank">PlayStation Store</a></p>
+                    <p><a href="https://www.xbox.com" target="_blank">Xbox Store</a></p>
+                    <p><a href="https://www.xbox.com/game-pass" target="_blank">Xbox Game Pass</a></p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>版本选择</h3>
+                    <p>标准版：$49.99</p>
+                    <p>豪华版：$69.99</p>
+                    <p>Game Pass：订阅免费</p>
+                    <p>预购优惠：10% OFF</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>相关链接</h3>
+                    <p><a href="index.html">返回首页</a></p>
+                    <p><a href="game-intro.html">游戏介绍</a></p>
+                    <p><a href="news.html">最新资讯</a></p>
+                    <p><a href="media.html">媒体画廊</a></p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 WUCHANG: Fallen Feathers. All rights reserved. | 
+                   开发：Leenzee Games | 发行：505 Games | 
+                   网站制作：MiniMax Agent</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="./js/main.js"></script>
+    
+    <!-- 倒计时功能 -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 发售日期设置
+            const releaseDate = new Date('2025-07-24T00:00:00').getTime();
+            
+            function updateCountdown() {
+                const now = new Date().getTime();
+                const timeLeft = releaseDate - now;
+                
+                if (timeLeft > 0) {
+                    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+                    
+                    document.getElementById('days').textContent = days.toString().padStart(2, '0');
+                    document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+                    document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+                    document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+                } else {
+                    // 游戏已发售
+                    document.getElementById('days').textContent = '00';
+                    document.getElementById('hours').textContent = '00';
+                    document.getElementById('minutes').textContent = '00';
+                    document.getElementById('seconds').textContent = '00';
+                    
+                    // 更新页面文本
+                    const heroTitle = document.querySelector('.game-title');
+                    const heroSubtitle = document.querySelector('.game-subtitle');
+                    if (heroTitle && heroSubtitle) {
+                        heroTitle.textContent = '现已发售';
+                        heroSubtitle.textContent = '立即开始您的冒险';
+                    }
+                    
+                    // 更新按钮文本
+                    const preorderBtns = document.querySelectorAll('.preorder-btn');
+                    preorderBtns.forEach(btn => {
+                        if (btn.textContent.includes('预购')) {
+                            btn.textContent = btn.textContent.replace('预购', '购买');
+                        }
+                    });
+                }
+            }
+            
+            // 立即更新一次
+            updateCountdown();
+            
+            // 每秒更新倒计时
+            setInterval(updateCountdown, 1000);
+            
+            // 平台卡片点击统计（模拟）
+            const platformCards = document.querySelectorAll('.platform-card');
+            platformCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    const platformName = this.querySelector('.platform-name').textContent;
+                    console.log(`用户点击了平台: ${platformName}`);
+                    
+                    // 添加点击效果
+                    this.style.transform = 'translateY(-10px) scale(1.02)';
+                    setTimeout(() => {
+                        this.style.transform = '';
+                    }, 200);
+                });
+            });
+            
+            // 价格卡片悬停效果增强
+            const pricingCards = document.querySelectorAll('.pricing-card');
+            pricingCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.boxShadow = '0 20px 50px rgba(212, 175, 55, 0.2)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.boxShadow = '';
+                });
+            });
+        });
+    </script>
+    
+    <!-- Google AdSense -->
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</body>
+</html>

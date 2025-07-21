@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="深入了解WUCHANG: Fallen Feathers的游戏世界：明末乱世背景、羽化病设定、古蜀文明元素、类魂战斗系统以及独特的心魔机制。">
+    <meta name="keywords" content="WUCHANG游戏介绍, 明末背景, 羽化病, 古蜀文明, 类魂战斗, 心魔机制, 无常角色, 巴蜀之地">
+    <meta name="author" content="MiniMax Agent">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="游戏介绍 - WUCHANG: Fallen Feathers | 黑暗奇幻动作RPG">
+    <meta property="og:description" content="探索明末乱世的神秘世界，了解羽化病的恐怖传说，体验融合古蜀文明的独特类魂动作RPG游戏。">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="./images/wuchang_character.jpg">
+    
+    <link rel="canonical" href="https://wuchang-fallen-feathers.com/game-intro.html">
+    <link rel="stylesheet" href="./css/styles.css">
+    
+    <title>游戏介绍 - WUCHANG: Fallen Feathers | 黑暗奇幻动作RPG</title>
+    
+    <style>
+        .intro-hero {
+            background: linear-gradient(
+                rgba(10, 10, 10, 0.8),
+                rgba(139, 0, 0, 0.4)
+            ),
+            url('./images/wuchang_character.jpg') center/cover no-repeat;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .story-section {
+            background: var(--bg-secondary);
+            position: relative;
+        }
+        
+        .story-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: linear-gradient(
+                to bottom,
+                transparent,
+                var(--bg-secondary)
+            );
+        }
+        
+        .gameplay-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+        
+        .gameplay-item {
+            background: var(--bg-tertiary);
+            padding: 30px;
+            border-radius: 10px;
+            border-left: 4px solid var(--accent-gold);
+        }
+        
+        .character-showcase {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 60px;
+            align-items: center;
+            margin-top: 60px;
+        }
+        
+        .character-image {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+        
+        .world-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+        
+        .world-feature {
+            text-align: center;
+            padding: 40px 20px;
+            background: var(--bg-tertiary);
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        
+        .world-feature:hover {
+            transform: translateY(-10px);
+        }
+        
+        .feature-number {
+            font-size: 3rem;
+            color: var(--accent-gold);
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .character-showcase {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .gameplay-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar" role="navigation" aria-label="主导航">
+        <div class="nav-container">
+            <a href="index.html" class="logo" aria-label="WUCHANG: Fallen Feathers 首页">
+                WUCHANG: Fallen Feathers
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html" aria-label="首页">首页</a></li>
+                <li><a href="game-intro.html" aria-label="游戏介绍" class="active">游戏介绍</a></li>
+                <li><a href="news.html" aria-label="新闻资讯">新闻资讯</a></li>
+                <li><a href="media.html" aria-label="媒体画廊">媒体画廊</a></li>
+                <li><a href="release-info.html" aria-label="发布信息">发布信息</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 主要内容 -->
+    <main class="main-content">
+        <!-- 介绍英雄区域 -->
+        <section class="intro-hero">
+            <div class="hero-content">
+                <h1 class="game-title">游戏世界</h1>
+                <p class="hero-description">
+                    踏入明末乱世的黑暗奇幻世界，体验前所未有的类魂动作RPG冒险
+                </p>
+            </div>
+        </section>
+
+        <!-- 故事背景 -->
+        <section class="story-section section">
+            <div class="container">
+                <h2 class="section-title">故事背景</h2>
+                
+                <div class="character-showcase">
+                    <div>
+                        <img src="./images/wuchang_character.jpg" alt="主角无常" class="character-image" loading="lazy">
+                    </div>
+                    <div>
+                        <h3 style="color: var(--accent-gold); font-size: 2rem; margin-bottom: 30px;">失忆女侠"无常"</h3>
+                        <p style="font-size: 1.2rem; line-height: 1.8; margin-bottom: 25px;">
+                            在明朝末年的巴蜀之地，一场被称为"羽化病"的神秘瘟疫蔓延开来。这种可怕的疾病将感染者变为扭曲的怪物，整个世界陷入了前所未有的黑暗之中。
+                        </p>
+                        <p style="font-size: 1.2rem; line-height: 1.8; margin-bottom: 25px;">
+                            玩家扮演一位名为"无常"的失忆女侠，她身患羽化病却保持着人性。在探寻自己身世之谜的同时，她必须对抗由瘟疫催生的妖魔，揭开这个世界背后的真相。
+                        </p>
+                        <p style="font-size: 1.2rem; line-height: 1.8; color: var(--accent-gold);">
+                            <strong>她的命运，就是整个世界的命运。</strong>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Google AdSense 广告位 -->
+                <div class="ad-container" style="margin: 60px 0;">
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                         data-ad-slot="XXXXXXXXXX"
+                         data-ad-format="auto"
+                         data-full-width-responsive="true">
+                        <div class="ad-placeholder">广告位 - Google AdSense</div>
+                    </ins>
+                </div>
+
+                <h3 style="color: var(--accent-gold); font-size: 2rem; margin: 60px 0 30px;">世界观设定</h3>
+                <div class="world-features">
+                    <div class="world-feature">
+                        <div class="feature-number">🏮</div>
+                        <h4>明末乱世</h4>
+                        <p>设定在明朝末年，战事四起的动荡时期，历史与幻想完美融合</p>
+                    </div>
+                    
+                    <div class="world-feature">
+                        <div class="feature-number">🗿</div>
+                        <h4>古蜀文明</h4>
+                        <p>深度融合三星堆、金沙遗址等古蜀文明元素，展现神秘的巴蜀文化</p>
+                    </div>
+                    
+                    <div class="world-feature">
+                        <div class="feature-number">👹</div>
+                        <h4>羽化病瘟疫</h4>
+                        <p>神秘的羽化病将感染者变为怪物，结合克苏鲁恐怖美学</p>
+                    </div>
+                    
+                    <div class="world-feature">
+                        <div class="feature-number">⚡</div>
+                        <h4>黑暗奇幻</h4>
+                        <p>压抑、扭曲的视觉风格，营造独特的黑暗奇幻氛围</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 核心玩法 -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">核心玩法系统</h2>
+                
+                <div class="gameplay-grid">
+                    <div class="gameplay-item">
+                        <h3 style="color: var(--accent-gold); margin-bottom: 20px;">⚔️ 类魂战斗系统</h3>
+                        <p style="margin-bottom: 15px;">
+                            <strong>高难度第三人称战斗</strong>，强调闪避、格挡和精准的攻击时机。每一次战斗都是生死考验。
+                        </p>
+                        <ul style="color: var(--text-secondary); line-height: 1.8;">
+                            <li>25种独特武器，分为五大类型</li>
+                            <li>主副武器同时装备，创造连招组合</li>
+                            <li>精确的碰撞检测和反馈</li>
+                            <li>敌人AI具有独特的攻击模式</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="gameplay-item">
+                        <h3 style="color: var(--accent-gold); margin-bottom: 20px;">🔮 法术与武器融合</h3>
+                        <p style="margin-bottom: 15px;">
+                            <strong>40种不同法术</strong>可与武器攻击融合，支持纯法术或混合战斗流派。
+                        </p>
+                        <ul style="color: var(--text-secondary); line-height: 1.8;">
+                            <li>法术可以增强武器攻击效果</li>
+                            <li>支持远程法术战斗</li>
+                            <li>法术连招系统</li>
+                            <li>元素伤害与状态效果</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="gameplay-item">
+                        <h3 style="color: var(--accent-gold); margin-bottom: 20px;">👹 心魔机制</h3>
+                        <p style="margin-bottom: 15px;">
+                            <strong>独特的风险收益系统</strong>，击杀敌人或死亡会积累心魔值，强化能力的同时增加风险。
+                        </p>
+                        <ul style="color: var(--text-secondary); line-height: 1.8;">
+                            <li>心魔值提升攻击力和法术威力</li>
+                            <li>同时增加所受伤害</li>
+                            <li>死亡后生成心魔敌人</li>
+                            <li>击败心魔可取回资源</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="gameplay-item">
+                        <h3 style="color: var(--accent-gold); margin-bottom: 20px;">🛠️ 成长与定制</h3>
+                        <p style="margin-bottom: 15px;">
+                            通过收集<strong>"赤汞"</strong>强化武器和技能，材料改装武器，打造个性化战斗风格。
+                        </p>
+                        <ul style="color: var(--text-secondary); line-height: 1.8;">
+                            <li>武器升级与强化系统</li>
+                            <li>技能树解锁</li>
+                            <li>装备改装与定制</li>
+                            <li>属性点分配</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 探索与世界 -->
+        <section class="section" style="background: var(--bg-secondary);">
+            <div class="container">
+                <h2 class="section-title">探索与世界构建</h2>
+                
+                <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 60px; align-items: center; margin-top: 60px;">
+                    <div>
+                        <h3 style="color: var(--accent-gold); font-size: 1.8rem; margin-bottom: 30px;">相互连通的世界</h3>
+                        <p style="font-size: 1.2rem; line-height: 1.8; margin-bottom: 25px;">
+                            游戏世界由多个相互连通的区域组成，鼓励玩家深度探索。每个区域都有独特的视觉风格、敌人类型和隐藏秘密。
+                        </p>
+                        <p style="font-size: 1.2rem; line-height: 1.8; margin-bottom: 25px;">
+                            从古老的巴蜀遗迹到被羽化病侵蚀的城镇，从神秘的地下洞穴到诡异的天空之城，每一处场景都讲述着自己的故事。
+                        </p>
+                        
+                        <h4 style="color: var(--accent-red-light); margin: 30px 0 15px;">多重结局设计</h4>
+                        <p style="color: var(--text-secondary); line-height: 1.7;">
+                            玩家的选择将直接影响支线任务的发展和最终的故事结局。游戏设计了多个不同的结局，鼓励玩家多次游玩，探索不同的故事路径。
+                        </p>
+                    </div>
+                    
+                    <div>
+                        <img src="./images/ming_dynasty_art.png" alt="古蜀遗迹场景" style="width: 100%; border-radius: 10px; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);" loading="lazy">
+                    </div>
+                </div>
+
+                <!-- Google AdSense 方形广告 -->
+                <div class="ad-container" style="margin: 60px 0;">
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                         data-ad-slot="XXXXXXXXXX"
+                         data-ad-format="rectangle">
+                        <div class="ad-placeholder" style="width: 336px; height: 280px;">广告位 - Google AdSense</div>
+                    </ins>
+                </div>
+            </div>
+        </section>
+
+        <!-- 技术亮点 -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">技术与艺术亮点</h2>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🎮</div>
+                        <h3 class="feature-title">虚幻引擎5</h3>
+                        <p class="feature-description">
+                            采用最新的虚幻引擎5技术，实现惊艳的视觉效果和流畅的游戏体验。Nanite虚拟几何体技术带来前所未有的细节表现。
+                        </p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">🎨</div>
+                        <h3 class="feature-title">文化复刻</h3>
+                        <p class="feature-description">
+                            深度参考中国非物质文化遗产，如资阳安岳石刻、阿坝桃坪羌寨等，在游戏中还原和展现中华传统美学。
+                        </p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">🌟</div>
+                        <h3 class="feature-title">国际化品质</h3>
+                        <p class="feature-description">
+                            与知名发行商505 Games合作，确保游戏达到国际3A标准，为全球玩家带来高品质的游戏体验。
+                        </p>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 60px;">
+                    <h3 style="color: var(--accent-gold); margin-bottom: 30px;">准备好踏入这个黑暗奇幻的世界了吗？</h3>
+                    <div class="cta-buttons">
+                        <a href="release-info.html" class="btn btn-primary">立即预购</a>
+                        <a href="media.html" class="btn btn-secondary">观看预告片</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>游戏信息</h3>
+                    <p>WUCHANG: Fallen Feathers</p>
+                    <p>开发商：Leenzee Games</p>
+                    <p>发行商：505 Games</p>
+                    <p>发售日期：2025年7月24日</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>支持平台</h3>
+                    <p><a href="release-info.html">PC (Steam)</a></p>
+                    <p><a href="release-info.html">PlayStation 5</a></p>
+                    <p><a href="release-info.html">Xbox Series X/S</a></p>
+                    <p><a href="release-info.html">Xbox Game Pass</a></p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>相关链接</h3>
+                    <p><a href="index.html">返回首页</a></p>
+                    <p><a href="news.html">最新资讯</a></p>
+                    <p><a href="media.html">媒体画廊</a></p>
+                    <p><a href="release-info.html">预购信息</a></p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>游戏特色</h3>
+                    <p>类魂战斗系统</p>
+                    <p>明末古蜀文明</p>
+                    <p>羽化病世界观</p>
+                    <p>心魔机制</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 WUCHANG: Fallen Feathers. All rights reserved. | 
+                   开发：Leenzee Games | 发行：505 Games | 
+                   网站制作：MiniMax Agent</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="./js/main.js"></script>
+    
+    <!-- Google AdSense -->
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</body>
+</html>
